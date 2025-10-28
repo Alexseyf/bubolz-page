@@ -135,7 +135,7 @@ const Contact = () => {
           
           <MapContainer>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.283605031381!2d-52.34144812337248!3d-31.76274991308253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5a26717e8a1%3A0x1234567890abcdef!2sPizzaria%20Bubolz!5e0!3m2!1spt-BR!2sbr!4v1698519000000!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.066517983391!2d-52.344891023480825!3d-31.771449974284244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5989271055b%3A0x935d4619c33b84ea!2sR.%20Bar%C3%A3o%20de%20Santa%20Tecla%2C%2077%20-%20Centro%2C%20Pelotas%20-%20RS%2C%2096010-140!5e0!3m2!1spt-BR!2sbr!4v1698519000000!5m2!1spt-BR!2sbr"
               title="Pizzaria Bubolz Localização"
               allowFullScreen={false}
               loading="lazy"
