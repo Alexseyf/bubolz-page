@@ -156,7 +156,9 @@ const Hero = () => {
             Uma receita familiar que se transforma em sabor na sua mesa.
           </StyledDescription>
           <CTAButton 
-            href="#cardapio" 
+            href="https://app.cardapioweb.com/pizzas_bubolz_"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaPizzaSlice />
             Cardápio
