@@ -1,0 +1,40 @@
+{
+  "name": "Pizzaria Bubolz | Pizzas Artesanais em Pelotas",
+  "short_name": "Pizzaria Bubolz",
+  "description": "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável. Delivery disponível.",
+  "categories": ["food", "restaurant", "pizza"],
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#e11d48",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Cardápio",
+      "url": "/cardapio",
+      "description": "Veja nosso cardápio"
+    },
+    {
+      "name": "Contato",
+      "url": "/#contato",
+      "description": "Entre em contato conosco"
+    }
+  ]
+}
