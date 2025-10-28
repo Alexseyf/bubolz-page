@@ -55,17 +55,13 @@ const AboutUs = () => {
         <AboutText>
           <h2>Sobre Nós</h2>
           <p>
-            Na Pizzaria Bubolz, acreditamos que cada pizza é única e merece um ambiente 
-            que respeite seu sabor e qualidade.
+            Somos a família Bubolz, e acreditamos que pizza não é apenas comida, é um momento de união. 
           </p>
           <p>
-            Nossa filosofia culinária baseia-se na tradição, na qualidade dos ingredientes e no 
-            amor pela gastronomia, combinando receitas clássicas com toques contemporâneos.
+            Cada massa aberta, cada molho preparado e cada fatia servida carrega o nosso propósito: aproximar pessoas.
           </p>
           <p>
-            Contamos com uma equipe de chefs qualificados e apaixonados, 
-            comprometidos em proporcionar experiências gastronômicas que estimulam 
-            o paladar e a satisfação de cada cliente.
+            Quando uma pizza Bubolz chega à sua mesa, nossas famílias se encontram; a nossa, que prepara, e a sua, que compartilha esse momento com amor.
           </p>
         </AboutText>
       </AboutContent>

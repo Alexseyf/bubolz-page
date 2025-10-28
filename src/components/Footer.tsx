@@ -127,8 +127,8 @@ const Footer = () => {
         <FooterColumn>
           <h3>Horário de Funcionamento</h3>
           <FooterLinks>
-            <li>Terça a Domingo: 18:00 - 23:00</li>
-            <li>Segunda-feira: Fechado</li>
+            <li>18h às 02h | Todos os dias</li>
+            <li>Fechados na QUINTA</li>
             <li>Delivery disponível</li>
             <li>Feriados: Horário normal</li>
           </FooterLinks>
@@ -140,16 +140,18 @@ const Footer = () => {
             <li>Rua Barão de Santa Tecla, 77 - Centro</li>
             <li>Pelotas - RS, 96010-140</li>
             <li>WhatsApp: (53) 99131-9632</li>
-            <li>contato@pizzasbubolzoficial.com.br</li>
+            <li>pizzasbubolzoficial@gmail.com</li>
           </FooterLinks>
         </FooterColumn>
       </FooterContent>
       
       <FooterBottom>
         <p>
-          © {currentYear} Pizzaria Bubolz. 
+          © {currentYear} Pizzas Bubolz. 
           <br />
           Todos os direitos reservados.
+          <br />
+          Jesus é o caminho, a verdade e a vida.
           <br />
         </p>
         <p>

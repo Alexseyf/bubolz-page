@@ -119,7 +119,7 @@ const Contact = () => {
                   <FaEnvelope />
                 </IconWrapper>
                 <InfoText>
-                  <p>contato@pizzasbubolzoficial.com.br</p>
+                  <p>pizzasbubolzoficial@gmail.com</p>
                 </InfoText>
               </InfoItem>
               <InfoItem>
@@ -127,8 +127,7 @@ const Contact = () => {
                   <FaClock />
                 </IconWrapper>
                 <InfoText>
-                  <p>Terça a Domingo: 18:00 - 23:00</p>
-                  <p>Segunda-feira: Fechado</p>
+                  <p>18h às 02h | Todos os dias | Fechados na QUINTA</p>
                 </InfoText>
               </InfoItem>
             </InfoList>

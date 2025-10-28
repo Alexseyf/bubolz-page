@@ -91,7 +91,7 @@ export default function RootLayout({
               "addressCountry": "BR"
             },
             "telephone": "+55 53 99131-9632",
-            "email": "contato@pizzasbubolzoficial.com.br",
+            "email": "pizzasbubolzoficial@gmail.com",
             "hasMenu": "https://www.pizzasbubolzoficial.com.br/cardapio",
             "acceptsReservations": true,
             "deliveryArea": "Pelotas",

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import localFont from 'next/font/local';
-import { FaPizzaSlice, FaWhatsapp } from 'react-icons/fa';
+import { FaPizzaSlice } from 'react-icons/fa';
 
 const playlistScript = localFont({
   src: '../fonts/display/Playlist Script.otf',
@@ -107,8 +107,8 @@ const HeroContent = styled.div`
 `;
 
 const CTAButton = styled.a`
-  background-color: #25d366;
-  color: white;
+  background-color: var(--color-secondary);
+  color: black;
   padding: 1rem 2rem;
   border-radius: 4px;
   font-weight: 600;
@@ -124,8 +124,7 @@ const CTAButton = styled.a`
   
   &:hover {
     transform: translateY(-3px);
-    background-color: #22c15e;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    background-color: var(--color-secondary-soft);
   }
 
   svg {
@@ -151,18 +150,16 @@ const Hero = () => {
           <img src="/images/logo.png" alt="Pizzaria Bubolz Logo" />
         </LogoColumn>
         <HeroContent>
-          <StyledTitle>Pizzaria Bubolz</StyledTitle>
+          <StyledTitle>Pizzas Bubolz</StyledTitle>
           <StyledDescription>
             Pizzas artesanais feitas com ingredientes selecionados.
-            Nossa tradição familiar se transforma em sabor na sua mesa.
+            Uma receita familiar que se transforma em sabor na sua mesa.
           </StyledDescription>
           <CTAButton 
-            href="https://wa.me/5553991319632?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido." 
-            target="_blank" 
-            rel="noopener noreferrer"
+            href="#cardapio" 
           >
-            <FaWhatsapp />
-            Peça Agora
+            <FaPizzaSlice />
+            Cardápio
           </CTAButton>
         </HeroContent>
       </TwoColumnWrapper>
