@@ -106,10 +106,10 @@ const Footer = () => {
     <FooterContainer>
       <FooterContent>
         <FooterColumn>
-          <h3>Pizzaria Bubolz</h3>
-          <p>A melhor e mais tradicional pizzaria artesanal de Pelotas, trazendo sabor e qualidade desde sempre.</p>
+          <h3>Pizzas Bubolz</h3>
+          <p>A melhor e mais tradicional pizzaria artesanal de Pelotas, trazendo sabor, autenticidade e qualidade desde sempre.</p>
           <SocialLinks>
-            <a href="https://www.instagram.com/pizzariabubolz" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/pizzasbubolzoficial" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
           </SocialLinks>
