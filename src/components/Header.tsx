@@ -3,20 +3,20 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaPizzaSlice, FaWhatsapp } from "react-icons/fa";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
 
 const playlistScript = localFont({
-  src: '../fonts/display/Playlist Script.otf',
-  variable: '--font-playlist-script'
+  src: "../fonts/display/Playlist Script.otf",
+  variable: "--font-playlist-script",
 });
 
 const libreFranklin = localFont({
-  src: '../fonts/display/LibreFranklin-Black.ttf',
-  variable: '--font-libre-franklin'
+  src: "../fonts/display/LibreFranklin-Black.ttf",
+  variable: "--font-libre-franklin",
 });
 
 const useScroll = () => {
-  const [scrollDir, setScrollDir] = useState('up');
+  const [scrollDir, setScrollDir] = useState("up");
   const [prevScroll, setPrevScroll] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -29,16 +29,16 @@ const useScroll = () => {
 
       if (currentScroll < headerHeight) {
         setVisible(true);
-      } else if (scrollDelta > 5) { 
+      } else if (scrollDelta > 5) {
         setVisible(!scrollingDown);
-        setScrollDir(scrollingDown ? 'down' : 'up');
+        setScrollDir(scrollingDown ? "down" : "up");
       }
 
       setPrevScroll(currentScroll);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScroll]);
 
   return visible;
@@ -54,7 +54,7 @@ const HeaderContainer = styled.header<{ $visible: boolean }>`
   position: sticky;
   top: 0;
   z-index: 50;
-  transform: translateY(${props => props.$visible ? '0' : '-100%'});
+  transform: translateY(${(props) => (props.$visible ? "0" : "-100%")});
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: 768px) {
@@ -83,7 +83,7 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  
+
   img {
     width: 100px;
     height: auto;
@@ -97,7 +97,7 @@ const MenuButton = styled.button`
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--color-white);
-  
+
   @media (max-width: 768px) {
     display: block;
   }
@@ -112,12 +112,12 @@ const Nav = styled.nav<{ $isOpen?: boolean }>`
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    max-height: ${props => (props.$isOpen ? '500px' : '0')};
+    max-height: ${(props) => (props.$isOpen ? "500px" : "0")};
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
-    opacity: ${props => (props.$isOpen ? '1' : '0')};
-    visibility: ${props => (props.$isOpen ? 'visible' : 'hidden')};
-    margin-top: ${props => (props.$isOpen ? '1rem' : '0')};
+    opacity: ${(props) => (props.$isOpen ? "1" : "0")};
+    visibility: ${(props) => (props.$isOpen ? "visible" : "hidden")};
+    margin-top: ${(props) => (props.$isOpen ? "1rem" : "0")};
   }
 `;
 
@@ -188,7 +188,7 @@ const Header = () => {
   const isVisible = useScroll();
 
   return (
-    <HeaderContainer 
+    <HeaderContainer
       className={`${playlistScript.variable} ${libreFranklin.variable}`}
       $visible={isVisible}
     >
@@ -204,13 +204,21 @@ const Header = () => {
         </MenuButton>
       </Logo>
       <Nav $isOpen={isMenuOpen}>
-        <NavLink href="#cardapio">
+        <NavLink
+          href="https://app.cardapioweb.com/pizzas_bubolz_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaPizzaSlice />
           Cardápio
         </NavLink>
         <NavLink href="#sobre">Sobre Nós</NavLink>
         <NavLink href="#contato">Localização</NavLink>
-        <CTAButton href="https://wa.me/5553991319632?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer">
+        <CTAButton
+          href="https://wa.me/5553991319632?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaWhatsapp />
           Peça Agora
         </CTAButton>
