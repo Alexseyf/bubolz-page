@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import AboutUs from '../components/AboutUs';
@@ -10,6 +10,18 @@ import BackToTop from '../components/BackToTop';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 
 export default function Home() {
+  // Garantir que a página sempre comece no topo
+  useEffect(() => {
+    // Desabilitar scroll restoration do navegador
+    if (typeof window !== 'undefined') {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      // Forçar scroll para o topo
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     <main>
       {/* Componente de cabeçalho com navegação */}

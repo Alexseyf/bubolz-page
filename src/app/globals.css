@@ -31,3 +31,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Prevenir scroll automático para âncoras */
+html {
+  scroll-behavior: auto;
+}
+
+/* Garantir que links de âncora não causem scroll automático */
+a[href^="#"] {
+  scroll-behavior: smooth;
+}

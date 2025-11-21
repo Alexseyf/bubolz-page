@@ -54,8 +54,8 @@ const HeroContainer = styled.section`
   padding: 0 2rem;
   
   @media (max-width: 768px) {
-    height: auto;
-    min-height: 85vh;
+    height: 100vh;
+    min-height: 100vh;
     padding: 2rem;
     background-attachment: scroll;
   }
