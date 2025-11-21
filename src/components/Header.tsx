@@ -60,7 +60,7 @@ const HeaderContainer = styled.header<{ $visible: boolean }>`
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 1rem;
-    position: relative;
+    position: sticky;
   }
 `;
 
