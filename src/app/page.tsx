@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import AboutUs from '../components/AboutUs';
@@ -10,38 +10,22 @@ import BackToTop from '../components/BackToTop';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 
 export default function Home() {
-  // useLayoutEffect executa antes da pintura, prevenindo o flash
   useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
       if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
       }
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }
-  }, []);
 
-  // Garantir que a página sempre comece no topo
-  useEffect(() => {
-    // Executar imediatamente e também após um pequeno delay
-    const scrollToTop = () => {
-      if (typeof window !== 'undefined') {
-        if ('scrollRestoration' in history) {
-          history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname);
       }
-    };
 
-    scrollToTop();
-    
-    // Também executar após o DOM estar completamente carregado
-    const timer = setTimeout(scrollToTop, 100);
-    
-    return () => clearTimeout(timer);
+      window.scrollTo(0, 0);
+
+      setTimeout(() => {
+        document.documentElement.classList.add('loaded');
+      }, 500);
+    }
   }, []);
 
   return (
