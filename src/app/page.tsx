@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import AboutUs from '../components/AboutUs';
@@ -10,16 +10,38 @@ import BackToTop from '../components/BackToTop';
 import WhatsAppFloat from '../components/WhatsAppFloat';
 
 export default function Home() {
-  // Garantir que a página sempre comece no topo
-  useEffect(() => {
-    // Desabilitar scroll restoration do navegador
+  // useLayoutEffect executa antes da pintura, prevenindo o flash
+  useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
       if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
       }
-      // Forçar scroll para o topo
       window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     }
+  }, []);
+
+  // Garantir que a página sempre comece no topo
+  useEffect(() => {
+    // Executar imediatamente e também após um pequeno delay
+    const scrollToTop = () => {
+      if (typeof window !== 'undefined') {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    };
+
+    scrollToTop();
+    
+    // Também executar após o DOM estar completamente carregado
+    const timer = setTimeout(scrollToTop, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   return (

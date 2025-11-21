@@ -41,3 +41,13 @@ html {
 a[href^="#"] {
   scroll-behavior: smooth;
 }
+
+/* Forçar posição inicial no topo */
+html, body {
+  scroll-behavior: auto !important;
+}
+
+/* Prevenir qualquer scroll automático durante o carregamento */
+body {
+  overflow-x: hidden;
+}
