@@ -35,7 +35,7 @@ const WhatsAppButton = styled.a`
 const WhatsAppFloat = () => {
   return (
     <WhatsAppButton 
-      href="https://wa.me/5553991319632?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido."
+      href="https://wa.me/5553992136666?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fazer pedido via WhatsApp"

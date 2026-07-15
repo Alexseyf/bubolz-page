@@ -215,7 +215,7 @@ const Header = () => {
         <NavLink href="#sobre">Sobre Nós</NavLink>
         <NavLink href="#contato">Localização</NavLink>
         <CTAButton
-          href="https://wa.me/5553991319632?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido."
+          href="https://wa.me/5553992136666?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido."
           target="_blank"
           rel="noopener noreferrer"
         >
