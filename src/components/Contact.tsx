@@ -127,7 +127,7 @@ const Contact = () => {
                   <FaClock />
                 </IconWrapper>
                 <InfoText>
-                  <p>18h às 02h | Todos os dias | Fechados na QUINTA</p>
+                  <p>18h à 01h | Todos os dias</p>
                 </InfoText>
               </InfoItem>
             </InfoList>

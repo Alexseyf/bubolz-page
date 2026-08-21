@@ -147,7 +147,6 @@ const Footer = () => {
           <h3>Horário de Funcionamento</h3>
           <FooterLinks>
             <li>18h à 01h | Todos os dias</li>
-            <li>Fechados na QUINTA</li>
             <li>Delivery disponível</li>
             <li>Feriados: Horário normal</li>
           </FooterLinks>
