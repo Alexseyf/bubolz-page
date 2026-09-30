@@ -98,7 +98,7 @@ export default function RootLayout({
               "postalCode": "96015-000",
               "addressCountry": "BR"
             },
-            "telephone": "+55 53 99131-9632",
+            "telephone": "+55 53 99243-7474",
             "email": "pizzasbubolzoficial@gmail.com",
             "hasMenu": "https://www.pizzasbubolzoficial.com.br/cardapio",
             "acceptsReservations": true,

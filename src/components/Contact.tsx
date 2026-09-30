@@ -111,7 +111,7 @@ const Contact = () => {
                   <FaPhone />
                 </IconWrapper>
                 <InfoText>
-                  <p>WhatsApp: (53) 99213-6666</p>
+                  <p>WhatsApp: (53) 99243-7474</p>
                 </InfoText>
               </InfoItem>
               <InfoItem>

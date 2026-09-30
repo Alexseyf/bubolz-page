@@ -157,7 +157,7 @@ const Footer = () => {
           <FooterLinks>
             <li>Rua Barão de Santa Tecla, 77 - Centro</li>
             <li>Pelotas - RS, 96010-140</li>
-            <li>WhatsApp: (53) 99213-6666</li>
+            <li>WhatsApp: (53) 99243-7474</li>
             <li>pizzasbubolzoficial@gmail.com</li>
           </FooterLinks>
         </FooterColumn>
