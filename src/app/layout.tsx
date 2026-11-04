@@ -1,28 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import StyledComponentsRegistry from "../lib/registry";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const display = localFont({ src: '../fonts/display/DMSerifDisplay-Regular.ttf', variable: '--font-display', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: "Pizzaria Bubolz | Pizzas Artesanais em Pelotas",
+  title: "Pizzana Pizzaria | Pizzas Artesanais em Pelotas",
   description: "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável. Delivery disponível.",
-  keywords: ["pizzaria", "pizza artesanal", "bubolz", "pelotas", "delivery", "pizza", "restaurante", "italiana", "pizzaria pelotas", "melhor pizza"],
-  authors: [{ name: "Pizzaria Bubolz" }],
-  creator: "Pizzaria Bubolz",
-  publisher: "Pizzaria Bubolz",
+  keywords: ["pizzaria", "pizza artesanal", "pizzana", "pelotas", "delivery", "pizza", "restaurante", "italiana", "pizzaria pelotas", "melhor pizza"],
+  authors: [{ name: "Pizzana Pizzaria" }],
+  creator: "Pizzana Pizzaria",
+  publisher: "Pizzana Pizzaria",
   icons: {
-    icon: '/images/logo.png',
-    apple: '/images/logo.png',
+    icon: '/images/pizzana-logo.png',
+    apple: '/images/pizzana-logo.png',
   },
   formatDetection: {
     email: true,
@@ -34,26 +25,26 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Pizzaria Bubolz | A Melhor Pizza Artesanal de Pelotas",
+    title: "Pizzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
     description: "Pizzas artesanais com ingredientes selecionados e massa fresca.",
     url: "https://www.pizzasbubolzoficial.com.br",
-    siteName: "Pizzaria Bubolz",
+    siteName: "Pizzana Pizzaria",
     locale: "pt_BR",
     type: "website",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/pizzana-logo.png",
         width: 800,
         height: 600,
-        alt: "Logo Pizzaria Bubolz",
+        alt: "Logo Pizzana Pizzaria",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pizzaria Bubolz | A Melhor Pizza Artesanal de Pelotas",
+    title: "Pizzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
     description: "Pizzas artesanais com ingredientes selecionados e massa fresca.",
-    images: ["/images/logo.jpeg"],
+    images: ["/images/pizzana-logo.png"],
   },
   robots: {
     index: true,
@@ -78,16 +69,16 @@ export default function RootLayout({
           `
         }} />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/images/logo-header.png" />
-        <link rel="apple-touch-icon" href="/images/logo-header.png" />
+        <link rel="icon" href="/images/pizzana-logo.png" />
+        <link rel="apple-touch-icon" href="/images/pizzana-logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Restaurant",
-            "name": "Pizzaria Bubolz",
+            "name": "Pizzana Pizzaria",
             "description": "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável.",
             "url": "https://www.pizzasbubolzoficial.com.br",
-            "logo": "https://www.pizzasbubolzoficial.com.br/images/logo.jpeg",
+            "logo": "https://www.pizzasbubolzoficial.com.br/images/pizzana-logo.png",
             "servesCuisine": ["Pizza", "Italiana"],
             "priceRange": "$$",
             "address": {
@@ -99,22 +90,21 @@ export default function RootLayout({
               "addressCountry": "BR"
             },
             "telephone": "+55 53 99243-7474",
-            "email": "pizzasbubolzoficial@gmail.com",
-            "hasMenu": "https://www.pizzasbubolzoficial.com.br/cardapio",
+            "hasMenu": "https://app.cardapioweb.com/pizzas_bubolz_",
             "acceptsReservations": true,
             "deliveryArea": "Pelotas",
             "openingHours": [
-              "Tu-Su 18:00-23:00"
+              "Mo-Su 18:00-01:00"
             ],
             "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Pix"],
             "sameAs": [
-              "https://www.instagram.com/pizzasbubolzoficial/",
+              "https://www.instagram.com/pizzanapizzaria?dlrf=MnAxN2F6MjV0ZHFh&utm_source=qr",
             ]
           })}
         </script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${display.variable} antialiased`}
       >
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>

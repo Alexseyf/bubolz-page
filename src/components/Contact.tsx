@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaClock } from 'react-icons/fa';
 
 const ContactContainer = styled.section`
   padding: 5rem 2rem;
@@ -114,14 +114,7 @@ const Contact = () => {
                   <p>WhatsApp: (53) 99243-7474</p>
                 </InfoText>
               </InfoItem>
-              <InfoItem>
-                <IconWrapper>
-                  <FaEnvelope />
-                </IconWrapper>
-                <InfoText>
-                  <p>pizzasbubolzoficial@gmail.com</p>
-                </InfoText>
-              </InfoItem>
+
               <InfoItem>
                 <IconWrapper>
                   <FaClock />

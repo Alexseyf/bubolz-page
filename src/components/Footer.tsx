@@ -112,7 +112,7 @@ const Footer = () => {
           </p>
           <SocialLinks>
             <a
-              href="https://www.instagram.com/pizzasbubolzoficial"
+              href="https://www.instagram.com/pizzanapizzaria?dlrf=MnAxN2F6MjV0ZHFh&utm_source=qr"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -158,7 +158,6 @@ const Footer = () => {
             <li>Rua Barão de Santa Tecla, 77 - Centro</li>
             <li>Pelotas - RS, 96010-140</li>
             <li>WhatsApp: (53) 99243-7474</li>
-            <li>pizzasbubolzoficial@gmail.com</li>
           </FooterLinks>
         </FooterColumn>
       </FooterContent>
