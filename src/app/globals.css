@@ -15,3 +15,32 @@ footer .footer-verse{font-size:12px;opacity:.65;border-top:0;padding-top:4px}
 
 .flavors-copy > p.chef-signature:not(.eyebrow) { font-size: 15px; line-height: 1.6; margin: 0 0 24px; }
 .flavors-copy .chef-signature strong { font-weight: 600; }
+
+/* Footer layout: centered desktop tagline; stacked brand and tagline on mobile. */
+footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto;
+  grid-template-areas: "brand tagline copyright instagram" "verse verse verse verse";
+}
+footer .footer-brand { grid-area: brand; justify-self: start; }
+footer .footer-tagline { grid-area: tagline; text-align: center; }
+footer .footer-copyright { grid-area: copyright; justify-self: end; margin: 0; width: auto; font-size: 12px; }
+footer .footer-instagram { grid-area: instagram; justify-self: end; font-size: 20px; }
+footer .footer-verse { grid-area: verse; }
+@media (min-width: 681px) {
+  footer { position: relative; }
+  footer .footer-tagline { grid-area: auto; position: absolute; left: 50%; top: 32px; width: max-content; white-space: nowrap; transform: translateX(-50%); }
+}
+@media (max-width: 680px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-areas: "brand" "tagline" "instagram" "copyright" "verse";
+    text-align: center;
+    row-gap: 18px;
+  }
+  footer .footer-brand,
+  footer .footer-tagline,
+  footer .footer-instagram,
+  footer .footer-copyright,
+  footer .footer-verse { justify-self: center; text-align: center; }
+}

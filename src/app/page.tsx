@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
     </main>
-    <footer><a className="footer-brand" href="#inicio">PIZZANA<small>P I Z Z A R I A</small></a><p>Pizza para compartilhar.</p><span>© {new Date().getFullYear()} Pizzana</span><a href={instagram} {...external} aria-label="Instagram da Pizzana"><FaInstagram /></a><p className="footer-verse">Jesus é o caminho a verdade e a vida.</p></footer>
+    <footer><a className="footer-brand" href="#inicio">PIZZANA<small>P I Z Z A R I A</small></a><p className="footer-tagline">Pizza para compartilhar.</p><span className="footer-copyright">© {new Date().getFullYear()} Pizzana</span><a href={instagram} {...external} className="footer-instagram" aria-label="Instagram da Pizzana"><FaInstagram /></a><p className="footer-verse">Jesus é o caminho a verdade e a vida.</p></footer>
     <a className="whatsapp-float" href={whatsapp} {...external} aria-label="Fazer pedido pelo WhatsApp"><FaWhatsapp /></a>
   </>;
 }
