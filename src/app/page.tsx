@@ -33,7 +33,7 @@ export default function Home() {
       <section id="sobre" className="together"><div className="together-inner"><h2>Tem lugar<br />para mais um.</h2><p>Da nossa família para a sua mesa.</p><p>Pizzas artesanais feitas com ingredientes selecionados. Uma receita familiar que se transforma em sabor na sua mesa.</p></div></section>
       <section className="flavors">
         <div className="flavors-photo"><img src="/images/pizza_banner.jpg" alt="Pizza artesanal com queijo derretido e borda dourada" width="900" height="800" loading="lazy" /></div>
-        <div className="flavors-copy"><p className="eyebrow">O SABOR DE ESTAR JUNTO</p><h2>Encontre seu<br />próximo sabor.</h2><p>Conheça o cardápio e escolha o que vai à mesa hoje.</p><a className="text-link" href={menu} {...external}>Explorar cardápio <FaArrowRight /></a></div>
+        <div className="flavors-copy"><p className="eyebrow">O SABOR DE ESTAR JUNTO</p><h2>Encontre seu<br />próximo sabor.</h2><p className="chef-signature">Cardápio assinado pelo chef <strong>Michel Bubolz</strong>.</p><a className="text-link" href={menu} {...external}>Explorar cardápio <FaArrowRight /></a></div>
       </section>
       <section className="story"><p>Cada massa aberta, cada molho preparado e cada fatia servida carrega o nosso propósito: <em>aproximar pessoas.</em></p><span>Quando a nossa pizza chega à sua mesa, nossas famílias se encontram.</span></section>
       <section id="contato" className="contact">
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
     </main>
-    <footer><a className="footer-brand" href="#inicio">PIZZANA<small>P I Z Z A R I A</small></a><p>Pizza para compartilhar.</p><span>© {new Date().getFullYear()} Pizzana</span><a href={instagram} {...external} aria-label="Instagram da Pizzana"><FaInstagram /></a></footer>
+    <footer><a className="footer-brand" href="#inicio">PIZZANA<small>P I Z Z A R I A</small></a><p>Pizza para compartilhar.</p><span>© {new Date().getFullYear()} Pizzana</span><a href={instagram} {...external} aria-label="Instagram da Pizzana"><FaInstagram /></a><p className="footer-verse">Jesus é o caminho a verdade e a vida.</p></footer>
     <a className="whatsapp-float" href={whatsapp} {...external} aria-label="Fazer pedido pelo WhatsApp"><FaWhatsapp /></a>
   </>;
 }
