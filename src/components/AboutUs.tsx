@@ -55,13 +55,13 @@ const AboutUs = () => {
         <AboutText>
           <h2>Sobre Nós</h2>
           <p>
-            Somos a família Bubolz, e acreditamos que pizza não é apenas comida, é um momento de união. 
+            Somos a Forzana e acreditamos que pizza não é apenas comida, é um momento de união.
           </p>
           <p>
             Cada massa aberta, cada molho preparado e cada fatia servida carrega o nosso propósito: aproximar pessoas.
           </p>
           <p>
-            Quando uma pizza Bubolz chega à sua mesa, nossas famílias se encontram; a nossa, que prepara, e a sua, que compartilha esse momento com amor.
+            Quando uma pizza Forzana chega à sua mesa, nossas famílias se encontram; a nossa, que prepara, e a sua, que compartilha esse momento com amor.
           </p>
         </AboutText>
       </AboutContent>

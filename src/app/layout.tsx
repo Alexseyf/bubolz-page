@@ -5,46 +5,46 @@ import StyledComponentsRegistry from "../lib/registry";
 const display = localFont({ src: '../fonts/display/DMSerifDisplay-Regular.ttf', variable: '--font-display', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: "Pizzana Pizzaria | Pizzas Artesanais em Pelotas",
+  title: "Forzana Pizzaria | Pizzas Artesanais em Pelotas",
   description: "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável. Delivery disponível.",
-  keywords: ["pizzaria", "pizza artesanal", "pizzana", "pelotas", "delivery", "pizza", "restaurante", "italiana", "pizzaria pelotas", "melhor pizza"],
-  authors: [{ name: "Pizzana Pizzaria" }],
-  creator: "Pizzana Pizzaria",
-  publisher: "Pizzana Pizzaria",
+  keywords: ["pizzaria", "pizza artesanal", "forzana", "pelotas", "delivery", "pizza", "restaurante", "italiana", "pizzaria pelotas", "melhor pizza"],
+  authors: [{ name: "Forzana Pizzaria" }],
+  creator: "Forzana Pizzaria",
+  publisher: "Forzana Pizzaria",
   icons: {
-    icon: '/images/pizzana-logo.png',
-    apple: '/images/pizzana-logo.png',
+    icon: '/images/forzana-logo.png',
+    apple: '/images/forzana-logo.png',
   },
   formatDetection: {
     email: true,
     address: true,
     telephone: true,
   },
-  metadataBase: new URL("https://www.pizzasbubolzoficial.com.br"),
+  metadataBase: new URL("https://pizzariaforzana.com.br"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Pizzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
+    title: "Forzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
     description: "Pizzas artesanais com ingredientes selecionados e massa fresca.",
-    url: "https://www.pizzasbubolzoficial.com.br",
-    siteName: "Pizzana Pizzaria",
+    url: "https://pizzariaforzana.com.br",
+    siteName: "Forzana Pizzaria",
     locale: "pt_BR",
     type: "website",
     images: [
       {
-        url: "/images/pizzana-logo.png",
-        width: 800,
-        height: 600,
-        alt: "Logo Pizzana Pizzaria",
+        url: "/images/forzana-logo.png",
+        width: 1536,
+        height: 1024,
+        alt: "Logo Forzana Pizzaria",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pizzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
+    title: "Forzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
     description: "Pizzas artesanais com ingredientes selecionados e massa fresca.",
-    images: ["/images/pizzana-logo.png"],
+    images: ["/images/forzana-logo.png"],
   },
   robots: {
     index: true,
@@ -69,16 +69,16 @@ export default function RootLayout({
           `
         }} />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/images/pizzana-logo.png" />
-        <link rel="apple-touch-icon" href="/images/pizzana-logo.png" />
+        <link rel="icon" href="/images/forzana-logo.png" />
+        <link rel="apple-touch-icon" href="/images/forzana-logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Restaurant",
-            "name": "Pizzana Pizzaria",
+            "name": "Forzana Pizzaria",
             "description": "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável.",
-            "url": "https://www.pizzasbubolzoficial.com.br",
-            "logo": "https://www.pizzasbubolzoficial.com.br/images/pizzana-logo.png",
+            "url": "https://pizzariaforzana.com.br",
+            "logo": "https://pizzariaforzana.com.br/images/forzana-logo.png",
             "servesCuisine": ["Pizza", "Italiana"],
             "priceRange": "$$",
             "address": {
@@ -90,7 +90,7 @@ export default function RootLayout({
               "addressCountry": "BR"
             },
             "telephone": "+55 53 99243-7474",
-            "hasMenu": "https://app.cardapioweb.com/pizzas_bubolz_",
+            "hasMenu": "https://app.cardapioweb.com/forzana_pizzaria",
             "acceptsReservations": true,
             "deliveryArea": "Pelotas",
             "openingHours": [
@@ -98,7 +98,7 @@ export default function RootLayout({
             ],
             "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Pix"],
             "sameAs": [
-              "https://www.instagram.com/pizzanapizzaria?dlrf=MnAxN2F6MjV0ZHFh&utm_source=qr",
+              "https://www.instagram.com/forzanapizzaria/",
             ]
           })}
         </script>

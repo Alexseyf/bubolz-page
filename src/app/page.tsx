@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import { FaWhatsapp, FaInstagram, FaArrowRight, FaBars, FaTimes, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 
-const menu = 'https://app.cardapioweb.com/pizzas_bubolz_';
+const menu = 'https://app.cardapioweb.com/forzana_pizzaria';
 const whatsapp = 'https://wa.me/5553992437474?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido.';
-const instagram = 'https://www.instagram.com/pizzanapizzaria?dlrf=MnAxN2F6MjV0ZHFh&utm_source=qr';
+const instagram = 'https://www.instagram.com/forzanapizzaria/';
 const external = { target: '_blank', rel: 'noopener noreferrer' };
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
   return <>
     <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <header className="header">
-      <a href="#inicio" aria-label="Pizzana — início" className="brand"><img src="/images/pizzana-logo.png" alt="Pizzana Pizzaria" width="240" height="160" /></a>
+      <a href="#inicio" aria-label="Forzana — início" className="brand"><img src="/images/forzana-logo.png" alt="Forzana Pizzaria" width="240" height="160" /></a>
       <button className="menu-toggle" aria-label={open ? 'Fechar menu' : 'Abrir menu'} aria-expanded={open} aria-controls="navigation" onClick={() => setOpen(!open)}>{open ? <FaTimes /> : <FaBars />}</button>
       <nav id="navigation" className={open ? 'navigation is-open' : 'navigation'} aria-label="Menu principal">
         <a href={menu} {...external}>Cardápio</a>
@@ -31,7 +31,7 @@ export default function Home() {
         <img className="hero-image" src="/images/pizzana-hero.png" alt="Fatia de pizza com queijo derretido, tomate e manjericão" width="1000" height="1100" fetchPriority="high" />
       </section>
       <section id="sobre" className="together"><div className="together-inner"><h2>Tem lugar<br />para mais um.</h2><p>Da nossa família para a sua mesa.</p><p>Pizzas artesanais feitas com ingredientes selecionados. Uma receita familiar que se transforma em sabor na sua mesa.</p></div></section>
-      <section className="flavors">
+      <section id="cardapio" className="flavors">
         <div className="flavors-photo"><img src="/images/pizza_banner.jpg" alt="Pizza artesanal com queijo derretido e borda dourada" width="900" height="800" loading="lazy" /></div>
         <div className="flavors-copy"><p className="eyebrow">O SABOR DE ESTAR JUNTO</p><h2>Encontre seu<br />próximo sabor.</h2><p className="chef-signature">Cardápio assinado pelo chef <strong>Michel Bubolz</strong>.</p><a className="text-link" href={menu} {...external}>Explorar cardápio <FaArrowRight /></a></div>
       </section>
@@ -41,11 +41,11 @@ export default function Home() {
         <div className="contact-details">
           <div><h3><FaMapMarkerAlt /> Onde estamos</h3><p>Rua Barão de Santa Tecla, 77 — Centro<br />Pelotas — RS</p><a className="text-link small" href="https://www.google.com/maps/search/?api=1&query=Rua+Bar%C3%A3o+de+Santa+Tecla+77+Pelotas+RS" {...external}>Como chegar <FaArrowRight /></a></div>
           <div><h3><FaClock /> Horário de atendimento</h3><p>Todos os dias, das 18h à 01h<br />Feriados: horário normal · Delivery disponível</p></div>
-          <div><h3>Fale com a Pizzana</h3><a href={whatsapp} {...external}>(53) 99243-7474</a><a className="instagram-link" href={instagram} {...external}><FaInstagram /> @pizzanapizzaria</a></div>
+          <div><h3>Fale com a Forzana</h3><a href={whatsapp} {...external}>(53) 99243-7474</a><a className="instagram-link" href={instagram} {...external}><FaInstagram /> @forzanapizzaria</a></div>
         </div>
       </section>
     </main>
-    <footer><a className="footer-brand" href="#inicio">PIZZANA<small>P I Z Z A R I A</small></a><p className="footer-tagline">Pizza para compartilhar.</p><span className="footer-copyright">© {new Date().getFullYear()} Pizzana</span><a href={instagram} {...external} className="footer-instagram" aria-label="Instagram da Pizzana"><FaInstagram /></a><p className="footer-verse">Jesus é o caminho a verdade e a vida.</p></footer>
+    <footer><a className="footer-brand" href="#inicio">FORZANA<small>P I Z Z A R I A</small></a><p className="footer-tagline">Pizza para compartilhar.</p><span className="footer-copyright">© {new Date().getFullYear()} Forzana</span><a href={instagram} {...external} className="footer-instagram" aria-label="Instagram da Forzana"><FaInstagram /></a><p className="footer-verse">Jesus é o caminho a verdade e a vida.</p></footer>
     <a className="whatsapp-float" href={whatsapp} {...external} aria-label="Fazer pedido pelo WhatsApp"><FaWhatsapp /></a>
   </>;
 }

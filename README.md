@@ -1,10 +1,10 @@
-# 🍕 Pizzaria Bubolz - Landing Page
+# 🍕 Forzana Pizzaria - Landing Page
 
-Uma landing page moderna e responsiva para a Pizzaria Bubolz, desenvolvida com Next.js 14, TypeScript e Styled Components.
+Uma landing page moderna e responsiva para a Forzana Pizzaria, desenvolvida com Next.js 14, TypeScript e Styled Components.
 
 ## 📋 Sobre o Projeto
 
-Este projeto é uma landing page desenvolvida para a Pizzaria Bubolz, apresentando seus produtos, história e facilitando o contato com os clientes. O site foi construído com foco em performance, SEO e experiência do usuário.
+Este projeto é uma landing page desenvolvida para a Forzana Pizzaria, apresentando seus produtos, história e facilitando o contato com os clientes. O site foi construído com foco em performance, SEO e experiência do usuário.
 
 ### ✨ Características
 
@@ -32,7 +32,7 @@ Para rodar o projeto localmente, siga estas etapas:
 git clone <url-do-repositorio>
 
 # Entre na pasta do projeto
-cd bubolz-page
+cd forzana-page
 
 # Instale as dependências
 npm install

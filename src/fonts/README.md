@@ -1,4 +1,4 @@
-# Fontes do Projeto Pizzaria Bubolz
+# Fontes do Projeto Forzana Pizzaria
 
 Este diretório contém as fontes utilizadas no projeto.
 

@@ -147,16 +147,16 @@ const Hero = () => {
     <HeroContainer className={`${playlistScript.variable} ${libreFranklin.variable}`}>
       <TwoColumnWrapper>
         <LogoColumn>
-          <img src="/images/logo.png" alt="Pizzaria Bubolz Logo" />
+          <img src="/images/forzana-logo.png" alt="Forzana Pizzaria Logo" />
         </LogoColumn>
         <HeroContent>
-          <StyledTitle>Pizzas Bubolz</StyledTitle>
+          <StyledTitle>Forzana Pizzaria</StyledTitle>
           <StyledDescription>
             Pizzas artesanais feitas com ingredientes selecionados.
             Uma receita familiar que se transforma em sabor na sua mesa.
           </StyledDescription>
           <CTAButton 
-            href="https://app.cardapioweb.com/pizzas_bubolz_"
+            href="https://app.cardapioweb.com/forzana_pizzaria"
             target="_blank"
             rel="noopener noreferrer"
           >

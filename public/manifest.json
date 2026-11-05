@@ -1,21 +1,19 @@
 {
-  "name": "Pizzaria Bubolz | Pizzas Artesanais em Pelotas",
-  "short_name": "Pizzaria Bubolz",
+  "name": "Forzana Pizzaria | Pizzas Artesanais em Pelotas",
+  "short_name": "Forzana",
   "description": "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável. Delivery disponível.",
-  "categories": ["food", "restaurant", "pizza"],
+  "categories": [
+    "food",
+    "restaurant",
+    "pizza"
+  ],
   "lang": "pt-BR",
   "icons": [
     {
-      "src": "/images/logo.png",
-      "sizes": "192x192",
+      "src": "/images/forzana-logo.png",
+      "sizes": "1536x1024",
       "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ],
   "theme_color": "#e11d48",
@@ -28,7 +26,7 @@
   "shortcuts": [
     {
       "name": "Cardápio",
-      "url": "/cardapio",
+      "url": "/#cardapio",
       "description": "Veja nosso cardápio"
     },
     {

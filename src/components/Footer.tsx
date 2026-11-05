@@ -105,14 +105,14 @@ const Footer = () => {
     <FooterContainer>
       <FooterContent>
         <FooterColumn>
-          <h3>Pizzas Bubolz</h3>
+          <h3>Forzana Pizzaria</h3>
           <p>
             A melhor e mais tradicional pizzaria artesanal de Pelotas, trazendo
             sabor, autenticidade e qualidade desde sempre.
           </p>
           <SocialLinks>
             <a
-              href="https://www.instagram.com/pizzanapizzaria?dlrf=MnAxN2F6MjV0ZHFh&utm_source=qr"
+              href="https://www.instagram.com/forzanapizzaria/"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -130,7 +130,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://app.cardapioweb.com/pizzas_bubolz_"
+                href="https://app.cardapioweb.com/forzana_pizzaria"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -164,7 +164,7 @@ const Footer = () => {
 
       <FooterBottom>
         <p>
-          © {currentYear} Pizzas Bubolz.
+          © {currentYear} Forzana Pizzaria.
           <br />
           Todos os direitos reservados.
           <br />

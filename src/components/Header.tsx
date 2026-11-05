@@ -174,7 +174,7 @@ const LogoText = styled.div`
   gap: 0.5rem;
 `;
 
-const BubolzText = styled.span`
+const ForzanaText = styled.span`
   font-family: var(--font-playlist-script), cursive;
   font-size: 2.8rem;
   font-weight: normal;
@@ -198,7 +198,7 @@ const Header = () => {
         <LogoContainer>
           <LogoText>
             <PizzasText className={libreFranklin.className}>Pizzas</PizzasText>
-            <BubolzText>Bubolz</BubolzText>
+            <ForzanaText>Forzana</ForzanaText>
           </LogoText>
         </LogoContainer>
         <MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -207,7 +207,7 @@ const Header = () => {
       </Logo>
       <Nav $isOpen={isMenuOpen}>
         <NavLink
-          href="https://app.cardapioweb.com/pizzas_bubolz_"
+          href="https://app.cardapioweb.com/forzana_pizzaria"
           target="_blank"
           rel="noopener noreferrer"
         >
