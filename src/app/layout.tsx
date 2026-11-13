@@ -1,113 +1,123 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import StyledComponentsRegistry from "../lib/registry";
-const display = localFont({ src: '../fonts/display/DMSerifDisplay-Regular.ttf', variable: '--font-display', display: 'swap' });
+import { site } from "../lib/site";
+
+const display = localFont({ src: "../fonts/display/DMSerifDisplay-Regular.woff2", variable: "--font-display", display: "swap" });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: site.colors.green,
+};
 
 export const metadata: Metadata = {
-  title: "Forzana Pizzaria | Pizzas Artesanais em Pelotas",
-  description: "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável. Delivery disponível.",
-  keywords: ["pizzaria", "pizza artesanal", "forzana", "pelotas", "delivery", "pizza", "restaurante", "italiana", "pizzaria pelotas", "melhor pizza"],
-  authors: [{ name: "Forzana Pizzaria" }],
-  creator: "Forzana Pizzaria",
-  publisher: "Forzana Pizzaria",
-  icons: {
-    icon: '/images/forzana-logo.png',
-    apple: '/images/forzana-logo.png',
-  },
-  formatDetection: {
-    email: true,
-    address: true,
-    telephone: true,
-  },
-  metadataBase: new URL("https://pizzariaforzana.com.br"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL(site.url),
+  title: site.title,
+  description: site.description,
+  applicationName: site.name,
+  authors: [{ name: site.name }],
+  creator: site.name,
+  publisher: site.name,
+  category: "food",
+  formatDetection: { email: false, address: true, telephone: true },
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Forzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
-    description: "Pizzas artesanais com ingredientes selecionados e massa fresca.",
-    url: "https://pizzariaforzana.com.br",
-    siteName: "Forzana Pizzaria",
+    title: "Forzana Pizzaria | Pizza Artesanal com Delivery em Pelotas",
+    description: "Pizza artesanal com massa fresca e ingredientes selecionados. Delivery em Pelotas todos os dias, das 18h à 01h.",
+    url: "/",
+    siteName: site.name,
     locale: "pt_BR",
     type: "website",
-    images: [
-      {
-        url: "/images/forzana-logo.png",
-        width: 1536,
-        height: 1024,
-        alt: "Logo Forzana Pizzaria",
-      },
-    ],
+    images: [{ url: "/images/forzana-og.jpg", width: 1200, height: 630, alt: "Pizza artesanal da Forzana Pizzaria, com queijo derretido e borda dourada" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Forzana Pizzaria | A Melhor Pizza Artesanal de Pelotas",
-    description: "Pizzas artesanais com ingredientes selecionados e massa fresca.",
-    images: ["/images/forzana-logo.png"],
+    title: "Forzana Pizzaria | Pizza Artesanal com Delivery em Pelotas",
+    description: "Pizza artesanal com massa fresca e ingredientes selecionados. Delivery em Pelotas todos os dias, das 18h à 01h.",
+    images: ["/images/forzana-og.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      url: site.url,
+      name: site.name,
+      inLanguage: "pt-BR",
+      publisher: { "@id": `${site.url}/#restaurant` },
+    },
+    {
+      "@type": "Restaurant",
+      "@id": `${site.url}/#restaurant`,
+      name: site.name,
+      description: site.description,
+      url: site.url,
+      logo: `${site.url}/icon-512.png`,
+      image: [`${site.url}/images/forzana-og.jpg`, `${site.url}/images/forzana-hero.webp`],
+      telephone: site.phoneE164,
+      servesCuisine: ["Pizza", "Italiana"],
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: site.address.street,
+        addressLocality: site.address.city,
+        addressRegion: site.address.region,
+        postalCode: site.address.postalCode,
+        addressCountry: site.address.country,
+      },
+      areaServed: { "@type": "City", name: "Pelotas" },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: site.hours.opens,
+          closes: site.hours.closes,
+        },
+      ],
+      hasMenu: site.menu,
+      acceptsReservations: false,
+      paymentAccepted: "Dinheiro, Cartão de crédito, Cartão de débito, Pix",
+      currenciesAccepted: "BRL",
+      potentialAction: {
+        "@type": "OrderAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: site.menu,
+          inLanguage: "pt-BR",
+          actionPlatform: ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"],
+        },
+        deliveryMethod: "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
+      },
+      sameAs: [site.instagram],
+    },
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            if (typeof history !== 'undefined' && 'scrollRestoration' in history) {
-              history.scrollRestoration = 'manual';
-            }
-          `
-        }} />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/images/forzana-logo.png" />
-        <link rel="apple-touch-icon" href="/images/forzana-logo.png" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Restaurant",
-            "name": "Forzana Pizzaria",
-            "description": "Pizzaria artesanal em Pelotas. Massas frescas, ingredientes selecionados e sabor incomparável.",
-            "url": "https://pizzariaforzana.com.br",
-            "logo": "https://pizzariaforzana.com.br/images/forzana-logo.png",
-            "servesCuisine": ["Pizza", "Italiana"],
-            "priceRange": "$$",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Rua Barão de Santa Tecla, 77",
-              "addressLocality": "Pelotas",
-              "addressRegion": "RS",
-              "postalCode": "96015-000",
-              "addressCountry": "BR"
-            },
-            "telephone": "+55 53 99243-7474",
-            "hasMenu": "https://app.cardapioweb.com/forzana_pizzaria",
-            "acceptsReservations": true,
-            "deliveryArea": "Pelotas",
-            "openingHours": [
-              "Mo-Su 18:00-01:00"
-            ],
-            "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Pix"],
-            "sameAs": [
-              "https://www.instagram.com/forzanapizzaria/",
-            ]
-          })}
-        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "if('scrollRestoration' in history){history.scrollRestoration='manual'}",
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+        />
       </head>
-      <body
-        className={`${display.variable} antialiased`}
-      >
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
+      <body className={`${display.variable} antialiased`}>{children}</body>
     </html>
   );
 }

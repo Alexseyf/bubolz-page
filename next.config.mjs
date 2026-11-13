@@ -1,17 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Habilitando o suporte nativo para styled-components
-  compiler: {
-    styledComponents: {
-      displayName: true, // Facilita a depuração em ambiente de desenvolvimento
-      ssr: true,         // Garante renderização do lado do servidor
-    },
-  },
-  // Configuração de imagens otimizadas
+  poweredByHeader: false,
   images: {
-    unoptimized: false, // Garantir que as imagens sejam otimizadas
-    domains: [],
-    remotePatterns: [],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [480, 640, 750, 828, 1080, 1200, 1920, 2048],
   },
 };
 
